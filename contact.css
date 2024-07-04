@@ -8,7 +8,6 @@ body {
 header {
     background-color: #444;
     padding: 10px 0;
-    position: relative;
 }
 
 .container {
@@ -42,6 +41,26 @@ nav .text-on-bar a {
 
 nav .text-on-bar a:hover {
     text-decoration: underline;
+}
+
+.social-icons {
+    position: fixed;
+    top: 70px; /* Adjust this value to place it right below the navigation bar */
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.social-icons img:hover {
+    opacity: 0.8;
 }
 
 .contact-hero {
@@ -147,30 +166,11 @@ footer {
     text-align: center;
 }
 
-.footer-info a {
+footer a {
     color: #fff;
     text-decoration: none;
 }
 
-.footer-info a:hover {
+footer a:hover {
     text-decoration: underline;
-}
-
-.social-icons {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.social-icons img {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-
-.social-icons img:hover {
-    opacity: 0.8;
 }
