@@ -1,189 +1,111 @@
-/* Reset and basic styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General styles */
 body {
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    background-color: #f5f5f5;
-    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Light gray background */
+    color: #333; /* Dark gray text color */
 }
 
 .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 20px;
+    width: 80%;
+    margin: 0 auto;
 }
 
-/* Header styles */
 header {
-    background: #4CAF50;
-    color: #fff;
+    background-color: #333; /* Dark gray background for header */
+    color: #fff; /* White text color */
     padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
 }
 
-.logo {
-    display: inline-block;
-    margin-right: 20px;
+header .logo {
+    float: left;
 }
 
-.logo img {
-    width: 80px;
-    height: auto;
-}
-
-nav {
-    display: inline-block;
+header nav {
     float: right;
 }
 
-.text-on-bar a {
-    color: #fff;
+header nav a {
+    color: #fff; /* White text color for navigation links */
     text-decoration: none;
     margin: 0 10px;
-    padding: 10px 15px;
-    display: inline-block;
+    padding: 10px;
 }
 
-.text-on-bar a:hover {
-    background-color: #45a049;
-}
-
-/* Main styles */
-main {
-    padding-top: 70px;
-}
-
+/* About Hero Section */
 .about-hero {
-    background: #f2f2f2 url('images/about-hero.jpg') center/cover no-repeat;
-    height: 300px;
-    color: #333;
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text color */
+    padding: 50px 0;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .about-hero h1 {
     font-size: 3rem;
+    margin-bottom: 10px;
 }
 
+.about-hero p {
+    font-size: 1.5rem;
+}
+
+/* About Content Section */
 .about-content {
-    padding: 40px 0;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
+    padding: 50px 0;
+    text-align: center;
 }
 
 .about-content h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #333;
 }
 
 .about-content p {
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
-.media-content {
-    padding: 40px 0;
-    background-color: #f5f5f5;
-}
-
-.media-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.media-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.photo img,
-.video iframe {
-    width: 100%;
-    height: auto;
-}
-
-/* Footer styles */
+/* Footer */
 footer {
-    background: #4CAF50;
-    color: #fff;
+    background-color: #333; /* Dark gray background for footer */
+    color: #fff; /* White text color */
     padding: 20px 0;
     text-align: center;
-}
-
-.footer-info {
-    font-size: 0.9rem;
-}
-
-.footer-info a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-info a:hover {
-    text-decoration: underline;
 }
 
 /* Social media icons */
 .social-icons {
     position: fixed;
-    top: 50%; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
-    z-index: 1000;
+    left: 20px;
+    top: 20%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    transform: translateY(-50%);
 }
 
 .social-icons a {
-    color: #333;
+    display: block;
+    margin-bottom: 10px;
+    color: #007bff; /* Blue color for icons */
     font-size: 1.5rem;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 50%;
-    text-align: center;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease;
 }
 
-.social-icons a:hover {
-    background-color: #ddd;
-}
-
-/* Media queries for responsiveness */
+/* Responsive design */
 @media (max-width: 768px) {
-    .container {
-        padding: 0 10px;
+    header .logo {
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
     }
 
-    .about-hero h1 {
-        font-size: 2.5rem;
+    header nav {
+        float: none;
+        text-align: center;
     }
 
-    .about-content h2 {
-        font-size: 2rem;
-    }
-
-    .media-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .social-icons {
-        display: none; /* Hide social icons on smaller screens */
+    header nav a {
+        display: block;
+        margin: 5px 0;
+        padding: 5px;
     }
 }
