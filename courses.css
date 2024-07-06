@@ -73,6 +73,7 @@ main {
     margin-bottom: 2rem;
 }
 
+/* Certificate Process Section */
 .certificate-process {
     background-color: #e0f7fa; /* Light blue */
 }
@@ -85,6 +86,7 @@ main {
     color: #004d40; /* Dark green-blue */
 }
 
+/* Special Note Section */
 .special-note {
     background-color: #c8e6c9; /* Light green */
 }
@@ -93,6 +95,7 @@ main {
     color: #388e3c; /* Dark green */
 }
 
+/* Courses Section */
 .courses {
     background-color: #f1f8e9; /* Light yellow-green */
 }
@@ -128,6 +131,7 @@ main {
     font-weight: bold;
 }
 
+/* Authentic Assessment Section */
 .authentic-assessment {
     background-color: #dcedc8; /* Light green */
 }
