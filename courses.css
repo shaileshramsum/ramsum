@@ -60,14 +60,32 @@ nav a {
     font-size: 1rem;
 }
 
-.courses {
+main {
+    padding: 2rem 0;
+}
+
+.certificate-process,
+.special-note,
+.courses,
+.authentic-assessment {
     background-color: #f9f9f9;
     padding: 3rem 0;
     text-align: center;
 }
 
-.courses h2 {
+.certificate-process h2,
+.courses h2,
+.authentic-assessment h2 {
     color: #006400; /* Dark green for better readability */
+    margin-bottom: 1rem;
+}
+
+.special-note p {
+    background-color: #e0f7fa; /* Light blue background for special note */
+    color: #00796b; /* Dark teal for text */
+    padding: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 .course-list {
