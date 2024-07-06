@@ -68,24 +68,37 @@ main {
 .special-note,
 .courses,
 .authentic-assessment {
-    background-color: #f9f9f9;
     padding: 3rem 0;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
-.certificate-process h2,
-.courses h2,
-.authentic-assessment h2 {
-    color: #006400; /* Dark green for better readability */
-    margin-bottom: 1rem;
+.certificate-process {
+    background-color: #e0f7fa; /* Light blue */
+}
+
+.certificate-process h2 {
+    color: #00796b; /* Dark teal */
+}
+
+.certificate-process p {
+    color: #004d40; /* Dark green-blue */
+}
+
+.special-note {
+    background-color: #c8e6c9; /* Light green */
 }
 
 .special-note p {
-    background-color: #e0f7fa; /* Light blue background for special note */
-    color: #00796b; /* Dark teal for text */
-    padding: 1rem;
-    border-radius: 5px;
-    font-weight: bold;
+    color: #388e3c; /* Dark green */
+}
+
+.courses {
+    background-color: #f1f8e9; /* Light yellow-green */
+}
+
+.courses h2 {
+    color: #33691e; /* Dark green */
 }
 
 .course-list {
@@ -113,6 +126,18 @@ main {
     color: blue; /* Blue color for download link */
     text-decoration: none;
     font-weight: bold;
+}
+
+.authentic-assessment {
+    background-color: #dcedc8; /* Light green */
+}
+
+.authentic-assessment h2 {
+    color: #689f38; /* Dark green */
+}
+
+.authentic-assessment p {
+    color: #33691e; /* Dark green */
 }
 
 footer {
