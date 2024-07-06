@@ -33,6 +33,16 @@ header {
     margin-right: 1rem;
 }
 
+.company-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.company-name a {
+    color: green;
+    text-decoration: none;
+}
+
 nav {
     margin-top: 1rem;
 }
@@ -50,15 +60,14 @@ nav a {
     font-size: 1rem;
 }
 
-nav .brand-name {
-    color: lightgreen;
-    font-weight: bold;
+.courses {
+    background-color: #f9f9f9;
+    padding: 3rem 0;
+    text-align: center;
 }
 
-.courses {
-    padding: 3rem 0;
-    background-color: #f0f0f0;
-    text-align: center;
+.courses h2 {
+    color: #006400; /* Dark green for better readability */
 }
 
 .course-list {
@@ -73,30 +82,19 @@ nav .brand-name {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 1rem;
-    width: 30%;
+    width: 45%;
     margin-bottom: 2rem;
-    text-align: left;
 }
 
 .course-item h3 {
-    margin-bottom: 0.5rem;
-    color: lightgreen;
-}
-
-.course-item p {
-    color: #666;
+    margin-bottom: 1rem;
+    color: green; /* Company color */
 }
 
 .course-item a {
-    display: block;
-    margin-top: 1rem;
-    color: blue;
+    color: blue; /* Blue color for download link */
     text-decoration: none;
     font-weight: bold;
-}
-
-.course-item a:hover {
-    text-decoration: underline;
 }
 
 footer {
@@ -104,13 +102,4 @@ footer {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
