@@ -88,11 +88,12 @@ main {
 
 /* Special Note Section */
 .special-note {
-    background-color: #c8e6c9; /* Light green */
+    background-color: #4caf50; /* Same color as the Plans page */
+    color: #fff; /* White text for contrast */
 }
 
 .special-note p {
-    color: #388e3c; /* Dark green */
+    color: #fff; /* Ensuring white text color */
 }
 
 /* Courses Section */
@@ -126,27 +127,42 @@ main {
 }
 
 .course-item a {
-    color: #1976d2; /* Blue color for download link */
+    color: blue;
     text-decoration: none;
-    font-weight: bold;
+}
+
+.course-item a:hover {
+    text-decoration: underline;
 }
 
 /* Authentic Assessment Section */
 .authentic-assessment {
-    background-color: #dcedc8; /* Light green */
+    background-color: #c8e6c9; /* Light green */
 }
 
 .authentic-assessment h2 {
-    color: #689f38; /* Dark green */
+    color: #33691e; /* Dark green */
 }
 
 .authentic-assessment p {
-    color: #33691e; /* Dark green */
+    color: #004d40; /* Dark green-blue */
 }
 
 footer {
     background-color: #333;
     color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer-info p {
+    margin: 0.5rem 0;
+}
+
+.footer-info a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
 }
