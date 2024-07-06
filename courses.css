@@ -39,7 +39,7 @@ header {
 }
 
 .company-name a {
-    color: green;
+    color: lightgreen;
     text-decoration: none;
 }
 
@@ -122,11 +122,11 @@ main {
 
 .course-item h3 {
     margin-bottom: 1rem;
-    color: green; /* Company color */
+    color: #388e3c; /* Company color */
 }
 
 .course-item a {
-    color: blue; /* Blue color for download link */
+    color: #1976d2; /* Blue color for download link */
     text-decoration: none;
     font-weight: bold;
 }
