@@ -1,308 +1,136 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
     color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
+    margin: 0 auto;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 1rem;
+}
+
+.company-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.company-name a {
+    color: green;
+    text-decoration: none;
+}
+
+nav {
+    margin-top: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header .logo img {
-    width: 150px;
-    height: auto;
-}
-
-header nav {
+nav .text-on-bar {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
-header nav a {
+nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
+    margin: 0 1rem;
+    font-size: 1rem;
 }
 
-header nav a:hover {
+nav a:hover {
     text-decoration: underline;
 }
 
-header .social-icons {
+.social-icons {
     display: flex;
     flex-direction: column;
     position: fixed;
+    top: 70px; /* Adjust this value to place it right below the navigation bar */
     left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1001;
+    z-index: 1000;
 }
 
-header .social-icons a {
-    margin: 10px 0;
+.social-icons a {
+    margin-bottom: 10px;
 }
 
-header .social-icons img {
+.social-icons img {
     width: 30px;
     height: 30px;
-}
-
-.hero {
-    background: url('images/hero.jpg') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
-    margin-top: 70px; /* Adjusted for fixed header */
-}
-
-.hero h1 {
-    font-size: 3.5em;
-    margin: 0;
-    font-weight: 700;
-}
-
-.hero p {
-    font-size: 1.8em;
-    font-weight: 400;
-}
-
-.focus-results {
-    background-color: #007bff;
-    padding: 50px 0;
-    text-align: center;
-    color: #fff;
-}
-
-.focus-results h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.focus-results .proposal-link {
-    background-color: #fff;
-    color: #007bff;
-    padding: 15px 30px;
-    text-decoration: none;
-    margin-top: 20px;
-    border-radius: 5px;
-    display: inline-block;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.focus-results .proposal-link:hover {
-    background-color: #0056b3;
-    color: #fff;
-}
-
-.services {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.services h2 {
-    font-size: 3em;
-    margin-bottom: 30px;
-    font-weight: 700;
-}
-
-.services p {
-    font-size: 1.4em;
-    margin-bottom: 40px;
-}
-
-.service-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.service-item {
-    width: calc(33.33% - 20px);
-    background-color: #fff;
-    padding: 30px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    text-align: left;
-    transition: all 0.3s ease;
-}
-
-.service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-}
-
-.service-item h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-    font-weight: 700;
-    color: #007bff;
-}
-
-.service-item p {
-    font-size: 1.1em;
-    color: #666;
-}
-
-.articles {
-    padding: 50px 0;
-    text-align: center;
-    background-color: #f4f4f4;
-}
-
-.articles h2 {
-    font-size: 3em;
-    margin-bottom: 30px;
-    font-weight: 700;
-}
-
-.article-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.article-item {
-    width: calc(33.33% - 20px);
-    background-color: #fff;
-    padding: 30px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    text-align: left;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.article-item h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-    font-weight: 700;
-    color: #333;
-}
-
-.article-item p {
-    font-size: 1.1em;
-    color: #666;
-}
-
-.article-item .article-content {
-    display: none;
-    font-size: 1em;
-    color: #333;
-}
-
-.article-item .read-more {
-    margin-top: auto;
-    font-size: 1.2em;
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.article-item .read-more:hover {
-    text-decoration: underline;
+    cursor: pointer;
 }
 
 footer {
     background-color: #333;
     color: #fff;
-    padding: 30px 0;
+    padding: 1rem 0;
     text-align: center;
+    position: relative;
+    margin-top: 2rem;
 }
 
-footer .footer-info p {
-    margin: 10px 0;
+.footer-info {
+    margin-bottom: 1rem;
 }
 
-footer .footer-info a {
+.footer-info p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-info a {
     color: #fff;
     text-decoration: none;
 }
 
-footer .footer-info a:hover {
+.footer-info a:hover {
     text-decoration: underline;
 }
 
-.footer-social-icons {
-    margin-top: 10px;
-}
-
-.footer-social-icons a {
-    margin: 0 10px;
-}
-
-.footer-social-icons img {
-    width: 30px;
-    height: 30px;
-}
-
-/* Responsive Styles */
+/* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
-    .service-item,
-    .article-item {
-        width: calc(50% - 10px);
-    }
-
-    .hero h1 {
-        font-size: 2.5em;
-    }
-
-    .hero p {
-        font-size: 1.4em;
-    }
-}
-
-@media (max-width: 480px) {
-    .service-item,
-    .article-item {
+    .container {
         width: 100%;
+        padding: 0 1rem;
     }
 
-    header nav {
+    nav .text-on-bar {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
 
-    header nav a {
-        margin: 5px 0;
+    nav a {
+        margin: 0.5rem 0;
     }
 
-    .hero h1 {
-        font-size: 2em;
-    }
-
-    .hero p {
-        font-size: 1.2em;
-    }
-
-    header .social-icons {
-        position: static;
-        margin-top: 10px;
+    .social-icons {
+        left: 5px;
     }
 }
