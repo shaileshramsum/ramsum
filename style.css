@@ -1,136 +1,198 @@
-/* Reset some basic styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Styles */
 body {
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
-    color: #333;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 80%;
     margin: 0 auto;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
 }
 
-.logo img {
+header .logo img {
     height: 50px;
-    margin-right: 1rem;
 }
 
-.company-name {
-    font-size: 1.5rem;
-    font-weight: bold;
+header nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-.company-name a {
-    color: green;
-    text-decoration: none;
+header nav ul li {
+    display: inline;
+    margin-right: 10px;
 }
 
-nav {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav .text-on-bar {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-nav a {
+header nav ul li a {
     color: #fff;
     text-decoration: none;
-    margin: 0 1rem;
-    font-size: 1rem;
-}
-
-nav a:hover {
-    text-decoration: underline;
 }
 
 .social-icons {
+    position: fixed;
+    top: 10px;
+    left: 10px;
     display: flex;
     flex-direction: column;
-    position: fixed;
-    top: 70px; /* Adjust this value to place it right below the navigation bar */
-    left: 10px;
     z-index: 1000;
 }
 
 .social-icons a {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .social-icons img {
     width: 30px;
     height: 30px;
-    cursor: pointer;
 }
 
-footer {
-    background-color: #333;
+.hero {
+    background: url('images/hero.jpg') no-repeat center center/cover;
     color: #fff;
-    padding: 1rem 0;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    position: relative;
-    margin-top: 2rem;
 }
 
-.footer-info {
-    margin-bottom: 1rem;
+.hero h1 {
+    font-size: 3em;
 }
 
-.footer-info p {
-    margin-bottom: 0.5rem;
+.hero p {
+    font-size: 1.2em;
 }
 
-.footer-info a {
+.focus-results, .services, .articles {
+    padding: 40px 0;
+}
+
+.focus-results h2, .services h2, .articles h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.proposal-link {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    background: #333;
     color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.services .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.services .service-item {
+    width: 30%;
+    background: #f4f4f4;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.articles .article-list .article-item {
+    margin-bottom: 20px;
+}
+
+.articles .article-list .article-item h3 {
+    margin-bottom: 10px;
+}
+
+.articles .article-list .article-item p {
+    margin-bottom: 10px;
+}
+
+.articles .article-list .article-item .read-more {
+    display: block;
+    margin-top: 10px;
+    color: #333;
     text-decoration: none;
 }
 
-.footer-info a:hover {
-    text-decoration: underline;
+.articles .article-list .article-item .article-content {
+    display: none;
 }
 
-/* Media Queries for Mobile Responsiveness */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-info {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-social-icons {
+    margin-top: 10px;
+}
+
+.footer-social-icons a {
+    margin-right: 10px;
+}
+
+.footer-social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
 @media (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 0 1rem;
-    }
-
-    nav .text-on-bar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        margin: 0.5rem 0;
+    .services .service-item {
+        width: 48%;
     }
 
     .social-icons {
-        left: 5px;
+        flex-direction: row;
+        top: auto;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-icons a {
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services .service-item {
+        width: 100%;
+    }
+
+    header nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        top: 10px;
+        left: 10px;
+        transform: translateX(0);
+    }
+
+    .social-icons a {
+        margin-bottom: 5px;
     }
 }
