@@ -15,24 +15,25 @@
                 <a href="index.html"><img src="images/logo.png" alt="Ramsum Creatives Logo"></a>
             </div>
             <nav>
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="services.html">Services</a>
-                    <a href="team.html">Team</a>
-                    <a href="courses.html">Courses</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contact.html">Contact Us</a>
-                    <a href="plans.html">Plans</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
-                    <a href="https://www.instagram.com"><img src="images/instagram.png" alt="Instagram"></a>
-                    <a href="https://www.whatsapp.com"><img src="images/whatsapp.png" alt="WhatsApp"></a>
-                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="plans.html">Plans</a></li>
+                </ul>
             </nav>
         </div>
     </header>
+
+    <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="https://wa.me/yourwhatsappnumber" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+    </div>
 
     <main>
         <section class="hero">
@@ -169,6 +170,11 @@
                 <p>Contact us: <a href="tel:+917985135684">+917985135684</a> | Email: <a href="mailto:contact@ramsum.in">contact@ramsum.in</a></p>
                 <p>Locations: Mumbai, Delhi, Bahraich</p>
                 <p>&copy; 2024 Ramsum Creatives. All rights reserved.</p>
+                <div class="footer-social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+                    <a href="https://wa.me/yourwhatsappnumber" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+                </div>
             </div>
         </div>
     </footer>
@@ -176,24 +182,17 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const articleItems = document.querySelectorAll('.article-item');
-
-            articleItems.forEach(function (articleItem) {
-                const readMoreLink = articleItem.querySelector('.read-more');
-                const articleContent = articleItem.querySelector('.article-content');
-
-                readMoreLink.addEventListener('click', function (event) {
-                    event.preventDefault();
-
-                    // Close all other article contents
-                    articleItems.forEach(function (item) {
-                        if (item !== articleItem) {
-                            item.classList.remove('expanded');
-                            item.querySelector('.article-content').style.display = 'none';
-                        }
-                    });
-
-                    articleItem.classList.toggle('expanded');
-                    articleContent.style.display = articleItem.classList.contains('expanded') ? 'block' : 'none';
+            articleItems.forEach(item => {
+                const readMoreBtn = item.querySelector('.read-more');
+                const articleContent = item.querySelector('.article-content');
+                readMoreBtn.addEventListener('click', function () {
+                    if (articleContent.style.display === 'block') {
+                        articleContent.style.display = 'none';
+                        readMoreBtn.textContent = 'Read More';
+                    } else {
+                        articleContent.style.display = 'block';
+                        readMoreBtn.textContent = 'Read Less';
+                    }
                 });
             });
         });
