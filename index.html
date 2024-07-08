@@ -197,8 +197,10 @@
                     articleItem.classList.toggle('expanded');
                     if (articleItem.classList.contains('expanded')) {
                         articleContent.style.display = 'block';
+                        readMoreLink.textContent = 'Read Less';
                     } else {
                         articleContent.style.display = 'none';
+                        readMoreLink.textContent = 'Read More';
                     }
                 });
             });
