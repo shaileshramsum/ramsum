@@ -25,9 +25,11 @@ header {
     z-index: 1000;
 }
 
-header .logo img {
-    width: 150px;
-    height: auto;
+header .logo {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 header nav {
@@ -106,6 +108,7 @@ header nav a:hover {
     font-size: 3em;
     margin-bottom: 20px;
     font-weight: 700;
+    color: #ffffff; /* Colorful heading */
 }
 
 .focus-results .proposal-link {
@@ -129,12 +132,14 @@ header nav a:hover {
 .services {
     padding: 50px 0;
     text-align: center;
+    background-color: #f0f0f0; /* Section background color */
 }
 
 .services h2 {
     font-size: 3em;
     margin-bottom: 30px;
     font-weight: 700;
+    color: #333333; /* Colorful heading */
 }
 
 .services p {
@@ -168,7 +173,7 @@ header nav a:hover {
     font-size: 1.8em;
     margin-bottom: 15px;
     font-weight: 700;
-    color: #333;
+    color: #007bff; /* Colorful heading */
 }
 
 .service-item p {
@@ -178,7 +183,7 @@ header nav a:hover {
 
 /* Articles section */
 .articles {
-    background-color: #fff;
+    background-color: #ffffff; /* Section background color */
     padding: 50px 0;
     text-align: center;
 }
@@ -187,6 +192,7 @@ header nav a:hover {
     font-size: 3em;
     margin-bottom: 30px;
     font-weight: 700;
+    color: #007bff; /* Colorful heading */
 }
 
 .article-list {
@@ -206,15 +212,11 @@ header nav a:hover {
     transition: all 0.3s ease;
 }
 
-.article-item.expanded {
-    width: 100%;
-}
-
 .article-item h3 {
     font-size: 2.2em;
     margin-bottom: 15px;
     font-weight: 700;
-    color: #333;
+    color: #007bff; /* Colorful heading */
 }
 
 .article-item p {
@@ -321,9 +323,4 @@ header nav .text-on-bar a {
 
 header nav .text-on-bar a:hover {
     text-decoration: underline;
-}
-
-/* Remove social media icons from footer */
-footer .social-media {
-    display: none;
 }
