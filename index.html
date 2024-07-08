@@ -173,8 +173,6 @@
         </div>
     </footer>
 
-    
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const articleItems = document.querySelectorAll('.article-item');
@@ -183,26 +181,10 @@
                 const readMoreLink = articleItem.querySelector('.read-more');
                 const articleContent = articleItem.querySelector('.article-content');
 
-                readMoreLink.addEventListener('click', function (event) {
-                    event.preventDefault();
-
-                    // Close all other article contents
-                    articleItems.forEach(function (item) {
-                        if (item !== articleItem) {
-                            item.classList.remove('expanded');
-                            item.querySelector('.article-content').style.display = 'none';
-                        }
-                    });
-
-                    // Toggle current article content
-                    articleItem.classList.toggle('expanded');
-                    if (articleItem.classList.contains('expanded')) {
-                        articleContent.style.display = 'block';
-                        readMoreLink.textContent = 'Read Less';
-                    } else {
-                        articleContent.style.display = 'none';
-                        readMoreLink.textContent = 'Read More';
-                    }
+                readMoreLink.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    articleContent.classList.toggle('expanded');
+                    readMoreLink.textContent = articleContent.classList.contains('expanded') ? 'Read Less' : 'Read More';
                 });
             });
         });
