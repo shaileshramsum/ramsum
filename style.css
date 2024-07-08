@@ -235,3 +235,118 @@ footer a {
 .social-icons img:hover {
     transform: scale(1.1);
 }
+/* Homepage specific styles */
+.hero {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.focus-results {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.focus-results h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.focus-results .proposal-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.focus-results .proposal-link:hover {
+    background-color: #45a049;
+}
+
+.services, .articles {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.services h2, .articles h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.service-list, .article-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-item, .article-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.service-item:hover, .article-item:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h3, .article-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-item p, .article-item p {
+    color: #666;
+}
+
+.article-item .read-more {
+    display: inline-block;
+    color: #4CAF50;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.article-item .article-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.social-icons {
+    position: fixed;
+    top: 120px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.social-icons a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
