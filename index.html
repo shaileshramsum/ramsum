@@ -9,31 +9,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="social-media-bar">
+    <a href="https://www.facebook.com/realramsum" target="_blank">
+        <img src="images/facebook-icon.png" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/ramsum.in/" target="_blank">
+        <img src="images/instagram-icon.png" alt="Instagram">
+    </a>
+    <a href="https://wa.me/917985135684" target="_blank">
+        <img src="images/whatsapp-icon.png" alt="WhatsApp">
+    </a>
+</div>
+
     <header>
         <div class="container">
             <div class="logo">
                 <a href="index.html"><img src="images/logo.png" alt="Ramsum Creatives Logo"></a>
             </div>
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="plans.html">Plans</a></li>
-                </ul>
+                <div class="text-on-bar">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="team.html">Team</a>
+                    <a href="courses.html">Courses</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="plans.html">Plans</a>
+                </div>
             </nav>
         </div>
     </header>
-
-    <div class="social-icons">
-        <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
-        <a href="https://wa.me/yourwhatsappnumber" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp"></a>
-    </div>
 
     <main>
         <section class="hero">
@@ -170,11 +176,6 @@
                 <p>Contact us: <a href="tel:+917985135684">+917985135684</a> | Email: <a href="mailto:contact@ramsum.in">contact@ramsum.in</a></p>
                 <p>Locations: Mumbai, Delhi, Bahraich</p>
                 <p>&copy; 2024 Ramsum Creatives. All rights reserved.</p>
-                <div class="footer-social-icons">
-                    <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
-                    <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
-                    <a href="https://wa.me/yourwhatsappnumber" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp"></a>
-                </div>
             </div>
         </div>
     </footer>
@@ -182,17 +183,38 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const articleItems = document.querySelectorAll('.article-item');
-            articleItems.forEach(item => {
-                const readMoreBtn = item.querySelector('.read-more');
-                const articleContent = item.querySelector('.article-content');
-                readMoreBtn.addEventListener('click', function () {
-                    if (articleContent.style.display === 'block') {
-                        articleContent.style.display = 'none';
-                        readMoreBtn.textContent = 'Read More';
-                    } else {
+
+            articleItems.forEach(function (articleItem) {
+                const readMoreLink = articleItem.querySelector('.read-more');
+                const articleContent = articleItem.querySelector('.article-content');
+
+                readMoreLink.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    // Close all other article contents
+                    articleItems.forEach(function (item) {
+                        if (item !== articleItem) {
+                            item.classList.remove('expanded');
+                            item.querySelector('.article-content').style.display = 'none';
+                        }
+                    });
+
+                    // Toggle current article content
+                    articleItem.classList.toggle('expanded');
+                    if (articleItem.classList.contains('expanded')) {
                         articleContent.style.display = 'block';
-                        readMoreBtn.textContent = 'Read Less';
+                        articleItem.style.flex = '1 1 100%';
+                    } else {
+                        articleContent.style.display = 'none';
+                        articleItem.style.flex = '1 1 calc(33.33% - 20px)';
                     }
+
+                    // Scroll to the clicked article
+                    const articleTop = articleItem.getBoundingClientRect().top + window.scrollY - 80; // Adjusted for fixed header
+                    window.scrollTo({
+                        top: articleTop,
+                        behavior: 'smooth'
+                    });
                 });
             });
         });
