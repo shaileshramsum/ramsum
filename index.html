@@ -9,18 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="social-media-bar">
-    <a href="https://www.facebook.com/realramsum" target="_blank">
-        <img src="images/facebook-icon.png" alt="Facebook">
-    </a>
-    <a href="https://www.instagram.com/ramsum.in/" target="_blank">
-        <img src="images/instagram-icon.png" alt="Instagram">
-    </a>
-    <a href="https://wa.me/917985135684" target="_blank">
-        <img src="images/whatsapp-icon.png" alt="WhatsApp">
-    </a>
-</div>
-
     <header>
         <div class="container">
             <div class="logo">
@@ -180,6 +168,12 @@
         </div>
     </footer>
 
+    <div class="social-icons">
+        <a href="https://www.facebook.com/realramsum" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/ramsum.in/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="https://wa.me/+917985135684" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const articleItems = document.querySelectorAll('.article-item');
@@ -203,18 +197,9 @@
                     articleItem.classList.toggle('expanded');
                     if (articleItem.classList.contains('expanded')) {
                         articleContent.style.display = 'block';
-                        articleItem.style.flex = '1 1 100%';
                     } else {
                         articleContent.style.display = 'none';
-                        articleItem.style.flex = '1 1 calc(33.33% - 20px)';
                     }
-
-                    // Scroll to the clicked article
-                    const articleTop = articleItem.getBoundingClientRect().top + window.scrollY - 80; // Adjusted for fixed header
-                    window.scrollTo({
-                        top: articleTop,
-                        behavior: 'smooth'
-                    });
                 });
             });
         });
