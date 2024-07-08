@@ -40,6 +40,11 @@ header nav {
     float: right;
 }
 
+header nav .text-on-bar {
+    display: flex;
+    align-items: center;
+}
+
 header nav a {
     color: #fff;
     text-decoration: none;
@@ -204,10 +209,11 @@ footer a {
     position: fixed;
     bottom: 20px;
     left: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .social-icons a {
-    display: block;
     margin-bottom: 10px;
 }
 
